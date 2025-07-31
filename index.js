@@ -3,7 +3,7 @@ const admin = require('firebase-admin');
 const fs = require('fs');
 
 // 🔐 Initialize Firebase Admin
-const serviceAccount = require('trickify-bot-firebase-adminsdk-fbsvc-156f464d11.json');
+const serviceAccount = require('./trickify-bot-firebase-adminsdk-fbsvc-156f464d11.json');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -72,7 +72,7 @@ bot.on("callback_query", async (query) => {
     });
 
   } else if (data === 'recharge') {
-    bot.sendPhoto(chatId, 'phonpe_qr.jpg', {
+    bot.sendPhoto(chatId, './phonpe_qr.jpg', {
       caption: '📷 Scan this Paytm QR to make payment.\n\nIf completed check below 👇👇',
       reply_markup: {
         inline_keyboard: [
