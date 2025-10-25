@@ -12,7 +12,7 @@ admin.initializeApp({
 
 const db = admin.database();
 
-const token = '8022160372:AAFVGi76CKEDWuWPd21E6cJvBspxSlSXbVQ';
+const token = '8316757994:AAEtj8zeSLySu9r3vuxKmpzHZQFqoMlGZDg';
 const bot = new TelegramBot(token, { polling: true });
 
 // /start command to register user
