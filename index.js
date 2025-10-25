@@ -20,13 +20,15 @@ bot.onText(/\/start/, async (msg) => {
   const id = msg.from.id;
   const name = msg.from.first_name;
 
-  const userRef = db.ref("Users/" + id);
-  const snapshot = await userRef.once("value");
+  bot.sendMessage(msg.chat.id, `Hi, ${name}`;
 
-  if (!snapshot.exists()) {
-    await userRef.set({
-      Balance: 0
-    });
+  //const userRef = db.ref("Users/" + id);
+  //const snapshot = await userRef.once("value");
+
+  //if (!snapshot.exists()) {
+    //await userRef.set({
+     //Balance: 0
+   // });
   }
 
   bot.sendMessage(msg.chat.id, `👋 Hi, ${name}! How are you?\n\nPlease choose below to continue.`, {
