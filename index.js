@@ -20,8 +20,6 @@ bot.onText(/\/start/, async (msg) => {
   const id = msg.from.id;
   const name = msg.from.first_name;
 
-  bot.sendMessage(msg.chat.id, `Hi, ${name}`;
-
   const userRef = db.ref("Users/" + id);
   const snapshot = await userRef.once("value");
 
