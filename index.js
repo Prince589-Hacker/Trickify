@@ -3,7 +3,7 @@ const admin = require('firebase-admin');
 const fs = require('fs');
 
 // 🔐 Initialize Firebase Admin
-const serviceAccount = require('./trickify-bot-firebase-adminsdk-fbsvc-a1cb6212c5.json');
+const serviceAccount = JSON.parse(process.env.KEY);
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
