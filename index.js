@@ -1,5 +1,8 @@
 const express = require("express");
 const app = express();
+const TelegramBot = require("node-telegram-bot-api");
+const { initializeApp } = require("firebase/app");
+const { getDatabase, ref, set, get, child } = require("firebase/database"); // Added get & child
 
 app.get("/", (req, res) => {
   res.send("🤖 Bot is running fine!");
