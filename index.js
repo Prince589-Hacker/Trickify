@@ -1,3 +1,14 @@
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("🤖 Bot is running fine!");
+});
+
+app.listen(3000, () => {
+  console.log(`🌐 Web server running on port 3000`);
+});
+  
 const TelegramBot = require("node-telegram-bot-api");
 const { initializeApp } = require("firebase/app");
 const { getDatabase, ref, set, get, child } = require("firebase/database"); // Added get & child
