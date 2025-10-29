@@ -24,8 +24,8 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase once
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
+const firebaseApp = initializeApp(firebaseConfig);
+const db = getDatabase(firebaseApp);
 
 // 🟢 /start command (with optional referral)
 bot.onText(/\/start(?:=id=(\d+))?/, async (msg, match) => {
